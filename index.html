@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Calculator</title>
-    <!-- Tailwind CSS CDN -->
-	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-				
-</head>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tailwind CSS Calculator</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
 
 	<body>
 		<div class="min-h-screen bg-white flex flex-col items-center justify-center">
@@ -19,28 +17,28 @@
 				</div>
 				
 				<div class="grid grid-cols-4 gap-1.5">
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm  text-xl text-gray-700 shadow-sm">7</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">8</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">9</button>
-					<button class="h-10 bg-gray-40 border border-yellow-600 text-black text-xl shadow-sm">/</button>
+					<button onclick="seven" class="h-10 bg-gray-50 border border-black-200 rounded-sm  text-xl text-gray-700 shadow-sm">7</button>
+					<button onclick="eight" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">8</button>
+					<button onclick="nine" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">9</button>
+					<button onclick="divide" class="h-10 bg-gray-40 border border-yellow-600 text-black text-xl shadow-sm">/</button>
 
 
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">4</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">5</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">6</button>
-					<button class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">*</button>
+					<button onclick="four" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">4</button>
+					<button onclick="five" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">5</button>
+					<button onclick="six" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">6</button>
+					<button onclick="multiple" class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">*</button>
 
 
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">1</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">2</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">3</button>
-					<button class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">-</button>
+					<button onclick="one" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">1</button>
+					<button onclick="two" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">2</button>
+					<button onclick="three" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">3</button>
+					<button onclick="substract" class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">-</button>
 
 
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">0</button>
-					<button class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">.</button>
-					<button class="h-10 bg-sky-500 border border-black-200 text-white text-lg font-semibold shadow-sm">=</button>
-					<button class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">+</button>
+					<button onclick="zero" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">0</button>
+					<button onclick="dot" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">.</button>
+					<button onclick="equal" class="h-10 bg-sky-500 border border-black-200 text-white text-lg font-semibold shadow-sm">=</button>
+					<button onclick="plus" class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">+</button>
 				</div>
 			</div>
 
