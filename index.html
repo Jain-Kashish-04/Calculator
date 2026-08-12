@@ -37,78 +37,117 @@
 					<button onclick="zero()" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">0</button>
 					<button onclick="clearinput()" class="h-10 bg-gray-50 border border-black-200 rounded-sm text-xl text-gray-700 shadow-sm">C</button>
 					<button onclick="equal()" class="h-10 bg-sky-500 border border-black-200 text-white text-lg font-semibold shadow-sm">=</button>
-					<button onclick="add()" class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">+</button>
+					<button onclick="addition()" class="h-10 bg-white-400 border border-yellow-600 text-black text-xl shadow-sm">+</button>
 				</div>
 			</div>
 
 		</div>
 		
-		<script>
-		
-			let num =""
-			
-			function seven(){
-				document.getElementById('input').value+="7" ;
+	<script>
+		function seven(){
+			document.getElementById('input').value += "7";
+		}
+
+		function eight(){
+			document.getElementById('input').value += "8";
+		}
+
+		function nine(){
+			document.getElementById('input').value += "9";
+		}
+
+		function four(){
+			document.getElementById('input').value += "4";
+		}
+
+		function five(){
+			document.getElementById('input').value += "5";
+		}
+
+		function six(){
+			document.getElementById('input').value += "6";
+		}
+
+		function one(){
+			document.getElementById('input').value += "1";
+		}
+
+		function two(){
+			document.getElementById('input').value += "2";
+		}
+
+		function three(){
+			document.getElementById('input').value += "3";
+		}
+
+		function zero(){
+			document.getElementById('input').value += "0";
+		}
+
+
+		function clearinput(){
+			document.getElementById('input').value = "";
+		}
+
+
+		function addition(){
+			document.getElementById('input').value += "+";
+		}
+
+		function substract(){
+			document.getElementById('input').value += "-";
+		}
+
+		function multiple(){
+			document.getElementById('input').value += "*";
+		}
+
+		function divide(){
+			document.getElementById('input').value += "/";
+		}
+
+
+		function equal(){
+
+			let expressions = document.getElementById('input').value;
+			let num1, num2, result;
+
+			if(expressions.includes('+')){
+				let values = expressions.split('+');
+				num1 = Number(values[0]);
+				num2 = Number(values[1]);
+				result = num1 + num2;
 			}
-			function eight(){
-				document.getElementById('input').value+="8" ;
+
+			else if(expressions.includes('-')){
+				let values = expressions.split('-');
+				num1 = Number(values[0]);
+				num2 = Number(values[1]);
+				result = num1 - num2;
 			}
-			function nine(){
-				document.getElementById('input').value+="9" ;
+
+			else if(expressions.includes('*')){
+				let values = expressions.split('*');
+				num1 = Number(values[0]);
+				num2 = Number(values[1]);
+				result = num1 * num2;
 			}
-			
-			
-			
-			function four(){
-				document.getElementById('input').value+="4" ;
+
+			else if(expressions.includes('/')){
+
+				let values = expressions.split('/');
+				num1 = Number(values[0]);
+				num2 = Number(values[1]);
+				if(num2 == 0){
+					document.getElementById('input').value = "Error";
+					return;
+				}
+				result = num1 / num2;
 			}
-			function five(){
-				document.getElementById('input').value+="5" ;
-			}
-			function six(){
-				document.getElementById('input').value+="6" ;
-			}
-			
-			
-			
-			function one(){
-				document.getElementById('input').value+="1" ;
-			}
-			function two(){
-				document.getElementById('input').value+="2" ;
-			}
-			function three(){
-				document.getElementById('input').value+="3" ;
-			}
-			function zero(){
-				document.getElementById('input').value+="0";
-			}
-			
-			
-			
-			function clearinput(){
-				document.getElementById('input').value=" ";
-			}
-			function equal(){
-				document.getElementById('input').value+= "=";
-			}
-		
-		
-		
-			function add(){
-				document.getElementById('input').value+="+";
-			}
-			function substract(){
-				document.getElementById('input').value+="-";
-			}
-			function multiple(){
-				document.getElementById('input').value+="*";
-			}
-			function divide(){
-				document.getElementById('input').value+="/";
-			}
-		
-		</script>
+
+			document.getElementById('input').value = result;
+		}
+	</script>
 
 	
 	</body>
