@@ -107,46 +107,62 @@
 		}
 
 
-		function equal(){
+	//	function equal(){
 
-			let expressions = document.getElementById('input').value;
-			let num1, num2, result;
+	//		let expressions = document.getElementById('input').value;
+	//		let num1, num2, result;
 
-			if(expressions.includes('+')){
-				let values = expressions.split('+');
-				num1 = Number(values[0]);
-				num2 = Number(values[1]);
-				result = num1 + num2;
-			}
+	//		if(expressions.includes('+')){
+	//			let values = expressions.split('+');
+	//			num1 = Number(values[0]);
+	//			num2 = Number(values[1]);
+	//			result = num1 + num2;
+	//		}
 
-			else if(expressions.includes('-')){
-				let values = expressions.split('-');
-				num1 = Number(values[0]);
-				num2 = Number(values[1]);
-				result = num1 - num2;
-			}
+	//		else if(expressions.includes('-')){
+	//			let values = expressions.split('-');
+	//			num1 = Number(values[0]);
+	//			num2 = Number(values[1]);
+	//			result = num1 - num2;
+	//		}
 
-			else if(expressions.includes('*')){
-				let values = expressions.split('*');
-				num1 = Number(values[0]);
-				num2 = Number(values[1]);
-				result = num1 * num2;
-			}
+	//		else if(expressions.includes('*')){
+	//			let values = expressions.split('*');
+	//			num1 = Number(values[0]);
+	//			num2 = Number(values[1]);
+	//			result = num1 * num2;
+	//		}
 
-			else if(expressions.includes('/')){
+	//		else if(expressions.includes('/')){
 
-				let values = expressions.split('/');
-				num1 = Number(values[0]);
-				num2 = Number(values[1]);
-				if(num2 == 0){
-					document.getElementById('input').value = "Error";
-					return;
-				}
-				result = num1 / num2;
-			}
+	//			let values = expressions.split('/');
+	//			num1 = Number(values[0]);
+	//			num2 = Number(values[1]);
+	//			if(num2 == 0){
+	//				document.getElementById('input').value = "Error";
+	//				return;
+	//			}
+	//			result = num1 / num2;
+	//		}
 
-			document.getElementById('input').value = result;
-		}
+	//		document.getElementById('input').value = result;
+	//	}
+	
+	
+	
+	function equal(){
+	
+		let expressions = document.getElementById('input').value;
+		let values = expressions.split();
+		let result = Number(values[0]);
+	
+	
+		
+	
+	
+	
+	
+	}
 	</script>
 
 	
