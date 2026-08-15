@@ -106,62 +106,34 @@
 			document.getElementById('input').value += "/";
 		}
 
-
-	//	function equal(){
-
-	//		let expressions = document.getElementById('input').value;
-	//		let num1, num2, result;
-
-	//		if(expressions.includes('+')){
-	//			let values = expressions.split('+');
-	//			num1 = Number(values[0]);
-	//			num2 = Number(values[1]);
-	//			result = num1 + num2;
-	//		}
-
-	//		else if(expressions.includes('-')){
-	//			let values = expressions.split('-');
-	//			num1 = Number(values[0]);
-	//			num2 = Number(values[1]);
-	//			result = num1 - num2;
-	//		}
-
-	//		else if(expressions.includes('*')){
-	//			let values = expressions.split('*');
-	//			num1 = Number(values[0]);
-	//			num2 = Number(values[1]);
-	//			result = num1 * num2;
-	//		}
-
-	//		else if(expressions.includes('/')){
-
-	//			let values = expressions.split('/');
-	//			num1 = Number(values[0]);
-	//			num2 = Number(values[1]);
-	//			if(num2 == 0){
-	//				document.getElementById('input').value = "Error";
-	//				return;
-	//			}
-	//			result = num1 / num2;
-	//		}
-
-	//		document.getElementById('input').value = result;
-	//	}
-	
-	
 	
 	function equal(){
-	
+		
 		let expressions = document.getElementById('input').value;
-		let values = expressions.split();
+		let values = expressions.split(/([*/+-])/);
 		let result = Number(values[0]);
 	
 	
-		
-	
-	
-	
-	
+		for(let i = 1; i < values.length ; i++){
+			let op = values[i];
+			let num = Number(values[i + 1]);
+			
+			if(op == '+'){
+				result = result + num;
+			}else if(op == '-'){
+				result = result - num;
+			}else if(op == '*'){
+				result = result * num;
+			}else if(op == '/'){
+				
+				if(num == 0){
+					document.getElementById('input').value= "Error";
+					return;
+				}
+				result = result / num ;
+			}
+		}
+		document.getElementById('input').value = result;
 	}
 	</script>
 
