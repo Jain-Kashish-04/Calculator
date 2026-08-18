@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Calculator</title>
+		<title>Calculator witth BODMAS</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
 
@@ -107,32 +107,8 @@
 		}
 
 		function equal(){
-			
 			let expressions = document.getElementById('input').value;
-			let values = expressions.split(/([*/+-])/);
-			let result = Number(values[0]);
-		
-		
-			for(let i = 1; i < values.length ; i++){
-				let op = values[i];
-				let num = Number(values[i + 1]);
-				
-				if(op == '+'){
-					result = result + num;
-				}else if(op == '-'){
-					result = result - num;
-				}else if(op == '*'){
-					result = result * num;
-				}else if(op == '/'){
-					
-					if(num == 0){
-						document.getElementById('input').value= "Error";
-						return;
-					}
-					result = result / num ;
-				}
-			}
-			document.getElementById('input').value = result;
+			
 		}
 	</script>
 	
