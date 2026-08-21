@@ -107,7 +107,57 @@
 		}
 
 		function equal(){
+		
 			let expressions = document.getElementById('input').value;
+			let parts = expressions.split("+");
+			let results = 0 ;
+			
+			for(let i= 0; i<parts.length ; i++){
+			
+				let part = parts[i];
+				
+				if(part.includes ('*')){
+					let values = part.split('*');
+					let answers = Number(values[0]);
+					
+					for(let j = 0; j < values.length ; j++){
+						answers = answers*Number(values[j]);
+					}
+				
+					results = results + answers;
+				}
+				else if(part.includes ('+')){
+				
+					let values = part.split('+');
+					let answers = Number(values[0]);
+					
+					for(let j = 0; j < values.length ; j++ ){
+						answers = answers+Number(values[j]);
+					}
+					results = results + answers ; 
+					
+				}
+				else if(part.includes ('-')){
+				
+					let values = part.split('-');
+					let answers = Number(values[0]);
+					
+					for(let j = 0; j < values.length ; j++ ){
+						answers = answers - Number(values[j]);
+					}
+					results = results + answers ; 
+					
+				}
+				
+				
+				
+				
+			    document.getElementById('input').value = results;			
+			}
+			
+			
+			
+			
 			
 		}
 	</script>
